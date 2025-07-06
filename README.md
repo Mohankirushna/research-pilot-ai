@@ -130,6 +130,26 @@ research-assistant-ai/
 
 ## 🤖 Customization
 
+### Changing the Research Topic
+You can modify the research topic in two ways:
+
+1. **Command Line Argument** (Recommended):
+   ```bash
+   python -m research_assistant.agent_graph --topic "Your Research Topic"
+   ```
+
+2. **Direct Code Modification**:
+   Edit the `initial_state` dictionary in `agent_graph.py`:
+   ```python
+   initial_state = {
+       "topic": "Your Research Topic Here",  # Change this to your desired topic
+       "explanation": None,
+       "related_topics": None,
+       "search_results": None,
+       # ... other fields remain the same
+   }
+   ```
+
 ### Using Different Models
 Edit the `.env` file to specify your preferred Ollama model:
 ```
